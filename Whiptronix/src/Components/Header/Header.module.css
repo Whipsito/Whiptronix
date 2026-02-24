@@ -1,25 +1,139 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem 5%;
+  transition: var(--transition);
+  background: transparent;
+}
+
+.header.scrolled {
+  background: rgba(11, 14, 20, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(25, 230, 44, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+.logoWhip {
+  color: var(--text-primary);
+}
+
+.logoTronix {
+  color: var(--green);
+  text-shadow: 0 0 20px var(--green-glow);
+}
+
 .nav {
-    background-color: #f5f5f5;
-    padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
-.nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+.navList {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
 }
 
-.nav li {
-    display: inline-block;
-    margin: 0 10px;
+.navLink {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  transition: color var(--transition);
+  padding: 0.25rem 0;
 }
 
-.nav a {
-    text-decoration: none;
-    color: #333;
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--green);
+  box-shadow: 0 0 8px var(--green-glow);
+  transition: width var(--transition);
 }
 
-.nav a:hover {
-    color: #666;
+.navLink:hover {
+  color: var(--green);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.whatsappBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--green);
+  color: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all var(--transition);
+  box-shadow: 0 0 20px var(--green-glow);
+}
+
+.whatsappBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px var(--green-glow), 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.whatsappBtn svg {
+  flex-shrink: 0;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .navList {
+    gap: 1rem;
+  }
+
+  .navLink {
+    font-size: 0.85rem;
+  }
+
+  .whatsappBtn span {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    display: none;
+  }
+
+  .container {
+    justify-content: space-between;
+  }
 }

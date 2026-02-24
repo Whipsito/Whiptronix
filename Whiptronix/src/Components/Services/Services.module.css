@@ -1,0 +1,103 @@
+.services {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dot grid background */
+.services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(25, 230, 44, 0.06) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: 0;
+}
+
+.services > * {
+  position: relative;
+  z-index: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid rgba(25, 230, 44, 0.1);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all var(--transition);
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: rgba(25, 230, 44, 0.4);
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px rgba(25, 230, 44, 0.1), 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.cardGlow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--green), transparent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
+  box-shadow: 0 0 20px var(--green-glow);
+}
+
+.iconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(25, 230, 44, 0.06);
+  border: 1px solid rgba(25, 230, 44, 0.15);
+  margin-bottom: 1.5rem;
+  transition: all var(--transition);
+}
+
+.card:hover .iconWrapper {
+  background: rgba(25, 230, 44, 0.12);
+  border-color: rgba(25, 230, 44, 0.35);
+  box-shadow: 0 0 25px rgba(25, 230, 44, 0.15);
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.cardDesc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
