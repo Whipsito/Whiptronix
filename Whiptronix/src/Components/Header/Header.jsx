@@ -35,7 +35,7 @@ const Header = () => {
         </nav>
 
         <a
-          href="https://wa.me/573106463166"
+          href="https://wa.me/573173746159"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.whatsappBtn}

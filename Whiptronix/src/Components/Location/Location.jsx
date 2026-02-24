@@ -49,7 +49,7 @@ const Location = () => {
           <div className={styles.mapWrapper} style={{ opacity: 0 }}>
             <iframe
               title="Ubicación Whiptronix"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789!2d-74.07!3d4.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMzknMDAuMCJOIDc0wrAwNCcxMi4wIlc!5e0!3m2!1ses!2sco!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18904.372706656748!2d-75.6634838!3d4.8540369!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3881011762123b%3A0x7bdde5232daa4a11!2sWhipTronix!5e1!3m2!1ses-419!2sco!4v1771969061918!5m2!1ses-419!2sco"
               className={styles.map}
               allowFullScreen=""
               loading="lazy"
@@ -68,7 +68,7 @@ const Location = () => {
                 </div>
                 <div>
                   <h4 className={styles.infoLabel}>Dirección</h4>
-                  <p className={styles.infoText}>Bogotá, Colombia</p>
+                  <p className={styles.infoText}>Pereira, Risaralda, Colombia</p>
                 </div>
               </div>
 
@@ -80,7 +80,7 @@ const Location = () => {
                 </div>
                 <div>
                   <h4 className={styles.infoLabel}>Teléfono</h4>
-                  <p className={styles.infoText}>310 646 3166</p>
+                  <p className={styles.infoText}>317 374 6159</p>
                 </div>
               </div>
 
@@ -93,8 +93,8 @@ const Location = () => {
                 </div>
                 <div>
                   <h4 className={styles.infoLabel}>Horario</h4>
-                  <p className={styles.infoText}>Lunes a Sábado</p>
-                  <p className={styles.infoText}>9:00 AM - 7:00 PM</p>
+                  <p className={styles.infoText}>Lunes a Domingo</p>
+                  <p className={styles.infoText}>8:00 AM - 6:00 PM</p>
                 </div>
               </div>
 
@@ -108,8 +108,8 @@ const Location = () => {
                 </div>
                 <div>
                   <h4 className={styles.infoLabel}>Instagram</h4>
-                  <a href="https://instagram.com/whiptronix" target="_blank" rel="noopener noreferrer" className={styles.infoLink}>
-                    @WHIPTRONIX
+                  <a href="https://www.instagram.com/whip.tronix/?hl=es" target="_blank" rel="noopener noreferrer" className={styles.infoLink}>
+                    @Whip.Tronix
                   </a>
                 </div>
               </div>
